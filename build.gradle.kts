@@ -1,3 +1,4 @@
+
 plugins {
     java
     application
@@ -5,7 +6,12 @@ plugins {
     id("org.danilopianini.gradle-java-qa") version "1.59.0"
     id("lifecycle-base")
     id("com.github.ben-manes.versions") version "0.51.0"
+
+    id("org.danilopianini.unibo-oop-gradle-plugin") version "1.0.13"
 }
+
+java { toolchain { languageVersion.set(JavaLanguageVersion.of(17)) } }
+
 
 group = "it.unibo.ares"
 version = "1.0.0"
