@@ -14,3 +14,8 @@ develocity {
         }
     }
 }
+
+include("gui")
+include("core")
+include("cli")
+include("runner")

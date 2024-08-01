@@ -13,6 +13,7 @@ repositories {
     mavenCentral()
 }
 
+java { toolchain { languageVersion.set(JavaLanguageVersion.of(17)) } }
 
 dependencies {
     compileOnly("com.github.spotbugs:spotbugs-annotations:4.8.6")

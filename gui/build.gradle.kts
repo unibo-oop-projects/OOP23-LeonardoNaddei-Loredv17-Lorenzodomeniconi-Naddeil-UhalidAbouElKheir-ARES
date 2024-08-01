@@ -20,6 +20,7 @@ val javaFXModules = listOf(
         "swing",
         "graphics"
 )
+java { toolchain { languageVersion.set(JavaLanguageVersion.of(17)) } }
 
 val supportedPlatforms = listOf("linux", "mac", "win", "mac-aarch64") // All required for OOP
 
