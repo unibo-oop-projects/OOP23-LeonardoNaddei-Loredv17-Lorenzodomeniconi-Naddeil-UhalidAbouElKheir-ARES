@@ -18,7 +18,7 @@ class TestFireSpread {
     private static final String SPREAD = "spread";
     private static final String FLAMM = "flammability";
 
-    // CHECKSTYLE: MissingJavadocMethod OFF
+    
     private Agent getFireAgent(final Double fuel, final Integer spread, final Double cons) {
 
         final FireAgentFactory fireFactory = new FireAgentFactory();
@@ -37,7 +37,7 @@ class TestFireSpread {
         agent.setParameter(FLAMM, flamm);
         return agent;
     }
-    // CHECKSTYLE: MissingJavadocMethod ON
+    
 
     /**
      * Test a state with only one Fire agent, the agent should not move
@@ -45,10 +45,10 @@ class TestFireSpread {
      */
     @Test
     void testFireSpreadModelAgent1() {
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
 
-        // CHECKSTYLE: MagicNumber ON
+        
         // Creates a Fire-type Agent with type 1, vision radius 1, direction (1,0),
         // spread 1, fuel 1.0 and consumption 0.3
         final Pos pos = new PosImpl(3, 3);
@@ -68,24 +68,24 @@ class TestFireSpread {
      */
     @Test
     void testFireSpreadModelAgent2() {
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
-        // CHECKSTYLE: MagicNumber ON
+        
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         // Create a Fire-type Agent with type 1, vision radius 1, direction (1,0),
         // spread 1, fuel 1.0 and consumption 0.3
         final Pos pos = new PosImpl(0, 0);
         final Agent fireAgent1 = getFireAgent(1.0, 1, 0.3);
         state.addAgent(pos, fireAgent1);
-        // CHECKSTYLE: MagicNumber ON
+        
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         // Create a Tree-type Agent, fuel 0.5 and flammability 0.3
         final Pos pos2 = new PosImpl(2, 2);
         final Agent treeAgent1 = getTreeAgent(0.5, 0.3);
         state.addAgent(pos2, treeAgent1);
-        // CHECKSTYLE: MagicNumber ON
+        
 
         // The fire should spread to the tree
         state = fireAgent1.tick(state, pos);
@@ -100,19 +100,19 @@ class TestFireSpread {
      */
     @Test
     void testFireSpreadModelAgent3() {
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
-        // CHECKSTYLE: MagicNumber ON
+        
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         // Create a Fire-type Agent with type 1, vision radius 1, direction (1,0),
         // spread 1, fuel 1.0 and consumption 0.3
         final Pos pos = new PosImpl(0, 0);
         final Agent fireAgent = getFireAgent(1.0, 1, 0.3);
         state.addAgent(pos, fireAgent);
-        // CHECKSTYLE: MagicNumber ON
+        
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         final PosImpl pos1 = new PosImpl(1, 0);
         final PosImpl pos2 = new PosImpl(0, 1);
         final PosImpl pos3 = new PosImpl(1, 1);
@@ -124,7 +124,7 @@ class TestFireSpread {
         state.addAgent(pos2, treeAgent);
         state.addAgent(pos3, treeAgent);
         state.addAgent(pos4, treeAgent);
-        // CHECKSTYLE: MagicNumber ON
+        
 
         // The fire should spread to the tree
         state = fireAgent.tick(state, pos);
@@ -144,19 +144,19 @@ class TestFireSpread {
      */
     @Test
     void testFireSpreadModelAgent4() {
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
-        // CHECKSTYLE: MagicNumber ON
+        
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         // Create a Fire-type Agent with type 1, vision radius 1,
         // spread 1, fuel 1.0 and consumption 0.3
         final Pos pos = new PosImpl(0, 0);
         final Agent fireAgent = getFireAgent(1.0, 1, 0.3);
         state.addAgent(pos, fireAgent);
-        // CHECKSTYLE: MagicNumber ON
+        
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         final PosImpl pos1 = new PosImpl(1, 0);
         final PosImpl pos2 = new PosImpl(0, 1);
         final PosImpl pos3 = new PosImpl(1, 1);
@@ -168,7 +168,7 @@ class TestFireSpread {
         state.addAgent(pos2, treeAgent);
         state.addAgent(pos3, treeAgent);
         state.addAgent(pos4, treeAgent);
-        // CHECKSTYLE: MagicNumber ON
+        
 
         state = fireAgent.tick(state, pos);
         state = fireAgent.tick(state, pos);

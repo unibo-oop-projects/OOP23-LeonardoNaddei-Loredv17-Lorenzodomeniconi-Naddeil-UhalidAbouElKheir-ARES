@@ -19,9 +19,9 @@ class TestSchelling {
     @Test
     void testSchellingSegregationModelAgent1() {
         final SchellingsAgentFactory factory = new SchellingsAgentFactory();
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
-        // CHECKSTYLE: MagicNumber ON
+        
         // Let's create a Schelling agent with type 1, threshold 0.5 and vision radius 1
         final Pos pos = new PosImpl(1, 1);
         final Agent type1Agent = factory.getSchellingSegregationModelAgent("1", 0.5, 1);
@@ -40,9 +40,9 @@ class TestSchelling {
     @Test
     void testSchellingSegregationModelAgent2() {
         final SchellingsAgentFactory factory = new SchellingsAgentFactory();
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
-        // CHECKSTYLE: MagicNumber ON
+        
 
         // Let's create a Schelling agent with type 1, threshold 0.5 and vision radius 1
         final Pos pos = new PosImpl(1, 1);
@@ -62,9 +62,9 @@ class TestSchelling {
     @Test
     void testSchellingSegregationModelAgent3() {
         final SchellingsAgentFactory factory = new SchellingsAgentFactory();
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
         State state = new StateImpl(5, 5);
-        // CHECKSTYLE: MagicNumber ON
+        
         // Let's create a Schelling agent with type 1, threshold 0.5 and vision radius 1
         final Pos pos = new PosImpl(1, 1);
         final Agent type1Agent = factory.getSchellingSegregationModelAgent("1", 0.5, 1);

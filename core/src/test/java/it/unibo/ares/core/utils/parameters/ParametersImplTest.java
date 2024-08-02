@@ -75,10 +75,10 @@ class ParametersImplTest {
      */
     @Test
     void testSetParameter() {
-        // CHECKSTYLE: MagicNumber OFF just two casual value to test
+        
         final Integer value = 10;
         final Integer newValue = 20;
-        // CHECKSTYLE: MagicNumber ON
+        
         parameters.addParameter(KEY, value, true);
         parameters.setParameter(KEY, newValue);
         final Optional<Parameter<Integer>> parameter = parameters.getParameter(KEY, Integer.class);
@@ -94,10 +94,10 @@ class ParametersImplTest {
     void testGetParameters() {
         final String key1 = "key1";
         final String key2 = "key2";
-        // CHECKSTYLE: MagicNumber OFF just two casual value to test
+        
         final Integer value1 = 10;
         final Integer value2 = 20;
-        // CHECKSTYLE: MagicNumber ON
+        
 
         parameters.addParameter(key1, value1, true);
         parameters.addParameter(key2, value2, true);
@@ -185,9 +185,9 @@ class ParametersImplTest {
         parameters.addParameter(KEY, value1, true);
 
         assertThrows(IllegalArgumentException.class, () -> {
-            // CHECKSTYLE: MagicNumber OFF just a casual different value to test
+            
             parameters.addParameter(KEY, 20, true);
-            // CHECKSTYLE: MagicNumber ON
+            
         });
     }
 

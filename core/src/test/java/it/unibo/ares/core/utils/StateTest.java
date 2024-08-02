@@ -18,7 +18,7 @@ import java.io.Serializable;
  */
 class StateTest {
     // Disable magic number chekstyle, they're random values to
-    // CHECKSTYLE: MagicNumber OFF
+    
 
     /**
      * Test the creation of a state and its dimensions.

@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
  * Implementation of the SimulationManager interface.
  * This class provides methods to save and load simulations.
  */
-@SuppressWarnings("PMD.SystemPrintln") // E UN PROGRAMMA CLI
 public class SimulationManagerImpl implements SimulationManager {
 
     private static final String DIRECTORY = "SavedSimulations/";

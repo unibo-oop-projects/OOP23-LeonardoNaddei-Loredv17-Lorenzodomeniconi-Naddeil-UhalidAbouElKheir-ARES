@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.Flow.Subscriber;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import it.unibo.ares.core.api.InitializationApi;
 import it.unibo.ares.core.api.SimulationControlApi;
 import it.unibo.ares.core.utils.Pair;
@@ -16,8 +16,6 @@ import it.unibo.ares.core.utils.parameters.Parameters;
  * This class is used as an entry point for the simulation system, it is used to
  * access the initialization and the controller of the simulations.
  */
-@SuppressFBWarnings(value = { "MS_EXPOSE_REP",
-        "EI_EXPOSE_REP" }, justification = "non sono esposti")
 public final class AresSupplier implements InitializationApi, SimulationControlApi {
     private static volatile AresSupplier instance;
 
@@ -46,8 +44,7 @@ public final class AresSupplier implements InitializationApi, SimulationControlA
      *
      * @return the singleton instance of the calculator supplier.
      */
-    @SuppressWarnings("PMD.SingletonClassReturningNewInstance")
-    public static AresSupplier getInstance() {
+        public static AresSupplier getInstance() {
         final AresSupplier curr = instance;
 
         if (curr != null) {

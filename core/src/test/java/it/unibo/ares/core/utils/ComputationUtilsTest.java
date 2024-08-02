@@ -23,7 +23,7 @@ class ComputationUtilsTest {
         final DirectionVector dir = new DirectionVectorImpl(1.0, 0.0);
         final Integer radius = 3;
         final Integer angle = 90;
-        // CHECKSTYLE: MagicNumber OFF sono numeri messi in modo da poter coprire un
+        
         // raggio sufficiente intorno al punto da testare
 
         final Set<PosImpl> inside = Stream.concat(
@@ -41,7 +41,7 @@ class ComputationUtilsTest {
                 .filter(p -> !inside.contains(p))
                 .filter(p -> !p.equals(pos))
                 .collect(Collectors.toSet());
-        // CHECKSTYLE: MagicNumber ON
+        
 
         for (final Pos p : inside) {
             assertTrue(ComputationUtils.insideCone(p, pos, dir, radius, angle));

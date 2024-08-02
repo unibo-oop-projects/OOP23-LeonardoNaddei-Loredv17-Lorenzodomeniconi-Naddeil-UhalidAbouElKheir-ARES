@@ -20,7 +20,7 @@ import it.unibo.ares.core.utils.state.StateImpl;
  */
 class AgentTest {
     // Disable magic number chekstyle, they're random values to
-    // CHECKSTYLE: MagicNumber OFF
+    
     private static final String TYPE = "type";
 
     private State getTestState() {
@@ -106,5 +106,5 @@ class AgentTest {
         assertFalse(state.getAgents().stream().map(Pair::getSecond).collect(Collectors.toList()).contains(agent1a));
         assertFalse(state.getAgents().stream().map(Pair::getSecond).collect(Collectors.toList()).contains(agent1b));
     }
-    // CHECKSTYLE: MagicNumber ON
+    
 }

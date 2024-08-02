@@ -63,8 +63,7 @@ public final class BoidsModelFactory implements ModelFactory {
      * 
      * @return the model
      */
-    @SuppressWarnings("PMD.PreserveStackTrace") // La causa è sempre qella
-    public Model getModel() {
+        public Model getModel() {
         // We need only one agent supplier since all agents are equal and only differs
         // in the type
         return new ModelBuilderImpl()

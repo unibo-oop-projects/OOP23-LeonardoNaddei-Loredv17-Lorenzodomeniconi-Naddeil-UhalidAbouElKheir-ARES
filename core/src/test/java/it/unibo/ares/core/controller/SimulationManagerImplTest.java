@@ -42,7 +42,7 @@ class SimulationManagerImplTest {
     void setUp() {
         MockitoAnnotations.openMocks(this);
 
-        // CHECKSTYLE: MagicNumber OFF
+        
         when(mockState.getAgents()).thenReturn(
                 IntStream.range(1, 5)
                         .boxed()

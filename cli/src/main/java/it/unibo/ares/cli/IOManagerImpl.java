@@ -4,7 +4,6 @@ package it.unibo.ares.cli;
  * Implementation of the IOManager interface that provides methods for printing
  * messages and reading input via java console.
  */
-@SuppressWarnings("PMD.SystemPrintln") // E UN PROGRAMMA CLI
 public class IOManagerImpl implements IOManager {
 
     /**

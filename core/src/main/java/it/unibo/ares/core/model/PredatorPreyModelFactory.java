@@ -64,8 +64,7 @@ public final class PredatorPreyModelFactory implements ModelFactory {
     }
 
     @Override
-    @SuppressWarnings("PMD.PreserveStackTrace") // La causa è sempre qellas
-    public Model getModel() {
+        public Model getModel() {
         return new ModelBuilderImpl()
                 .addParameter(new ParameterImpl<>("numeroAgentiPreda", Integer.class,
                         new ParameterDomainImpl<>("Numero di agenti preda", (Integer n) -> n >= 0),

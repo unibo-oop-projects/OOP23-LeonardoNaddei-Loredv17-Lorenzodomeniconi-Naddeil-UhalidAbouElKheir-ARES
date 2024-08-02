@@ -37,7 +37,7 @@ class TestPredatorPrey {
      */
     @Test
     void testPredatorHuntsPrey() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = new StateImpl(5, 5);
 
         final Pos predatorPos = new PosImpl(1, 1);
@@ -60,7 +60,7 @@ class TestPredatorPrey {
      */
     @Test
     void testPredatorHuntsNearestPrey() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = new StateImpl(5, 5);
 
         final Pos predatorPos = new PosImpl(1, 1);
@@ -88,7 +88,7 @@ class TestPredatorPrey {
      */
     @Test
     void testPreyEscapes() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = new StateImpl(5, 5);
 
         final Pos preyPos = new PosImpl(2, 2);

@@ -91,8 +91,7 @@ public class FireSpreadModelFactory implements ModelFactory {
      * @throws IllegalAccessException If the required parameters are not provided.
      */
     @Override
-    @SuppressWarnings("PMD.PreserveStackTrace") // La causa è sempre qella
-    public Model getModel() {
+        public Model getModel() {
         return new ModelBuilderImpl()
                 .addParameter(new ParameterImpl<>("numFire", Integer.class,
                         new ParameterDomainImpl<>("Numero di agenti fuoco (1-n)",

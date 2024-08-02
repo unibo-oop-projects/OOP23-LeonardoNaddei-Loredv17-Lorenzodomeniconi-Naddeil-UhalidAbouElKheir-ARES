@@ -13,9 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * This class tests the VirusAgentFactory class.
  */
-@SuppressWarnings({ "PMD.AvoidUncheckedExceptionsInSignatures", "PMD.AvoidAccessibilityAlteration",
-        "PMD.AvoidDuplicateLiterals" })
-// Reflection utilizzata per accedere a metodi privati, utilizzo di unchecked
 // per fare suppress
 class TestVirusModel {
     private IVirusAgentFactory factoryI;
@@ -60,8 +57,7 @@ class TestVirusModel {
                 .getDeclaredMethod("infectPerson", Agent.class);
         method.setAccessible(true);
 
-        @SuppressWarnings(UNCHECKED)
-        final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryP, agent);
+                final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryP, agent);
         assertEquals("I", a.get().getType());
     }
 
@@ -84,8 +80,7 @@ class TestVirusModel {
                 .getDeclaredMethod("recoveryInfected", Agent.class);
         method.setAccessible(true);
 
-        @SuppressWarnings(UNCHECKED)
-        final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryI, agent);
+                final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryI, agent);
         assertEquals("P", a.get().getType());
     }
 
@@ -108,8 +103,7 @@ class TestVirusModel {
                 .getDeclaredMethod("recoveryInfected", Agent.class);
         method.setAccessible(true);
 
-        @SuppressWarnings(UNCHECKED)
-        final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryI, agent);
+                final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryI, agent);
         assertTrue(a.isEmpty());
     }
 
@@ -132,8 +126,7 @@ class TestVirusModel {
                 .getDeclaredMethod("infectPerson", Agent.class);
         method.setAccessible(true);
 
-        @SuppressWarnings(UNCHECKED)
-        final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryP, agent);
+                final Optional<Agent> a = (Optional<Agent>) method.invoke(factoryP, agent);
         assertTrue(a.isEmpty());
     }
 }

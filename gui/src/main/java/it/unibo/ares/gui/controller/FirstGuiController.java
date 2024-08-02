@@ -228,8 +228,7 @@ public final class FirstGuiController implements Initializable {
      * are set.
      * If any exception occurs during this process, it shows the error message.
      */
-    @SuppressWarnings("PMD.AvoidCatchingGenericException")
-    void setAgentParameter() {
+        void setAgentParameter() {
         if (choiceAgent.getValue() == null) {
             guiWriter.showError("Please select an agent to parametrize");
             return;

@@ -63,8 +63,7 @@ public final class SugarscapeModelFactory implements ModelFactory {
     }
 
     @Override
-    @SuppressWarnings("PMD.PreserveStackTrace") // La causa è sempre qella
-    public Model getModel() {
+        public Model getModel() {
         return new ModelBuilderImpl()
                 .addParameter(new ParameterImpl<>("numeroAgentiConsumer", Integer.class,
                         new ParameterDomainImpl<>("Numero di agenti consumer",

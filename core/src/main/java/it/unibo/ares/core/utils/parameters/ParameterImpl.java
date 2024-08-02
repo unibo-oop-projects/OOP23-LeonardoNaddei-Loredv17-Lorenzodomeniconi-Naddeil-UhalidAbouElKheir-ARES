@@ -29,8 +29,7 @@ public final class ParameterImpl<T extends Serializable> implements Parameter<T>
      * @param userSettable a flag indicating whether the parameter is user settable
      *                     or not
      */
-    @SuppressWarnings("unchecked")
-    public ParameterImpl(final String key, final T value,
+        public ParameterImpl(final String key, final T value,
             final ParameterDomain<T> domain, final Boolean userSettable) {
         this.value = value;
         this.key = key;

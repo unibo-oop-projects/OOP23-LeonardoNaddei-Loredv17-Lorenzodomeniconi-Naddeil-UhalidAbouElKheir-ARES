@@ -88,8 +88,7 @@ public final class ParametersImpl implements Parameters {
     public <T extends Serializable> Optional<Parameter<T>> getParameter(final String key, final Class<T> type) {
         final Optional<Map<String, Parameter<?>>> parameterMap = Optional.ofNullable(typeMap.get(type));
         if (parameterMap.isPresent()) {
-            @SuppressWarnings("unchecked")
-            final Parameter<T> parameter = (Parameter<T>) parameterMap.get().get(key);
+                        final Parameter<T> parameter = (Parameter<T>) parameterMap.get().get(key);
             return Optional.ofNullable(parameter);
         }
         return Optional.empty();
@@ -99,8 +98,7 @@ public final class ParametersImpl implements Parameters {
      * {@inheritDoc}
      */
     @Override
-    @SuppressWarnings("unchecked")
-    public <T extends Serializable> void setParameter(final String key, final T value) {
+        public <T extends Serializable> void setParameter(final String key, final T value) {
         final Optional<Parameter<T>> parameter = getParameter(key, (Class<T>) value.getClass());
         if (parameter.isPresent()) {
             typeMap.get(value.getClass()).replace(key, parameter.get().updateValue(value));
@@ -146,8 +144,7 @@ public final class ParametersImpl implements Parameters {
         return getParametersStream().filter(Parameter::userSettable).allMatch(Parameter::isSetted);
     }
 
-    @SuppressWarnings("unchecked")
-    @Override
+        @Override
     public <T extends Serializable> Optional<Parameter<T>> getParameter(final String key) {
         return getParametersStream().filter(p -> p.getKey().equals(key)).map(p -> (Parameter<T>) p).findAny();
     }

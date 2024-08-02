@@ -18,7 +18,6 @@ import org.ini4j.Ini;
  * the need to read from the .ini file every time a configuration value is
  * requested.
  */
-@SuppressWarnings({ "PMD.SystemPrintln", "PMD.LooseCoupling" }) // E UN PROGRAMMA CLI, Ini4j non ha interfacce
 public final class ConfigServiceImpl implements ConfigService {
 
     /**
@@ -47,8 +46,7 @@ public final class ConfigServiceImpl implements ConfigService {
     /**
      * @return the singleton instance of the ConfigServiceImpl.
      */
-    @SuppressWarnings("PMD.SingletonClassReturningNewInstance")
-    public static ConfigServiceImpl getInstance() {
+        public static ConfigServiceImpl getInstance() {
         final ConfigServiceImpl curr = instance;
 
         if (curr != null) {

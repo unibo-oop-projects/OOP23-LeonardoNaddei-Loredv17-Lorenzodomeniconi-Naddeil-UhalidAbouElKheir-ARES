@@ -31,8 +31,7 @@ public final class StringCaster {
      * @param <T>   The type to cast the string to.
      * @return The casted value.
      */
-    @SuppressWarnings({ "PMD.AvoidCatchingGenericException", "PMD.PreserveStackTrace" }) // non si è sicuri di quale
-                                                                                         // eccezione
+                                                                                             // eccezione
     public static <T extends Serializable> T cast(final String value, final Class<T> type) {
         if (!CAST_MAP.containsKey(type)) {
             throw new IllegalArgumentException("Il tipo di dato non è supportato");

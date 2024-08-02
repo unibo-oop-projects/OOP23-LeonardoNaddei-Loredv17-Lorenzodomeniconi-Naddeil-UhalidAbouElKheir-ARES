@@ -18,7 +18,6 @@ import it.unibo.ares.core.utils.state.State;
 /**
  * A factory class for creating Fire agents.
  */
-@SuppressWarnings("PMD.AvoidDuplicateLiterals") // utilizzato per concatenazione stringa, non ha senso usare una
                                                 // costante
 public final class FireAgentFactory implements AgentFactory {
 

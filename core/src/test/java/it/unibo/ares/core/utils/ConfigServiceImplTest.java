@@ -12,7 +12,6 @@ import org.junit.jupiter.api.Test;
 
 import it.unibo.ares.core.utils.configservice.ConfigServiceImpl;
 
-@SuppressWarnings({ "PMD.AvoidUncheckedExceptionsInSignatures", "PMD.AvoidAccessibilityAlteration" })
 class ConfigServiceImplTest {
 
     private static final String CONFIG_SERVICE = "it.unibo.ares.core.utils.configservice.ConfigServiceImpl";
@@ -35,8 +34,7 @@ class ConfigServiceImplTest {
         final Object obj = method.invoke(instance, "Test", "flag_false",
                 Boolean.class);
         if (obj instanceof Optional) {
-            @SuppressWarnings("unchecked") // Suppress the unchecked warning
-            final Optional<Boolean> flagValue = (Optional<Boolean>) obj;
+                        final Optional<Boolean> flagValue = (Optional<Boolean>) obj;
 
             assertNotNull(flagValue);
             assertEquals(false, flagValue.orElse(true));
@@ -62,8 +60,7 @@ class ConfigServiceImplTest {
         final Object obj = method.invoke(instance, "Test", "flag_true",
                 Boolean.class);
         if (obj instanceof Optional) {
-            @SuppressWarnings("unchecked") // Suppress the unchecked warning
-            final Optional<Boolean> flagValue = (Optional<Boolean>) obj;
+                        final Optional<Boolean> flagValue = (Optional<Boolean>) obj;
 
             assertNotNull(flagValue);
             assertEquals(true, flagValue.orElse(false));

@@ -14,8 +14,6 @@ import it.unibo.ares.core.utils.pos.PosImpl;
 import it.unibo.ares.core.utils.state.State;
 import it.unibo.ares.core.utils.state.StateImpl;
 
-@SuppressWarnings({ "PMD.AvoidUncheckedExceptionsInSignatures", "PMD.AvoidAccessibilityAlteration" })
-// Reflection utilizzata per accedere a metodi privati
 class TestBoids {
     private static final String BOIDSFACTORY = "it.unibo.ares.core.agent.BoidsAgentFactory";
     private static final String COLL = "collisionAvoindance";
@@ -119,9 +117,9 @@ class TestBoids {
                 b, state, movingAgentPos, movingAgentDir,
                 radius,
                 angle);
-        // CHECKSTYLE: MagicNumber OFF sono i risultati attesi
+        
         final DirectionVector expectedDir = new DirectionVectorImpl(-2.0, -1.0);
-        // CHECKSTYLE: MagicNumber ON
+        
         assertEquals(newDir, expectedDir.getNormalized());
     }
 
@@ -211,10 +209,10 @@ class TestBoids {
         final Agent movingAgent = b.createAgent();
         final Pos movingAgentPos = new PosImpl(0, 0);
         final Integer radius = 3;
-        // CHECKSTYLE: MagicNumber OFF angolo per testare, in base a questo valore si
+        
         // calcola la direzione
         final Integer angle = 30;
-        // CHECKSTYLE: MagicNumber OFF just the dimension of the state, not important
+        
 
         final DirectionVector movinAgentDir = new DirectionVectorImpl(-1.0, 0.0);
         final DirectionVector obstacleAgentsDir = new DirectionVectorImpl(1.0, 0.0);

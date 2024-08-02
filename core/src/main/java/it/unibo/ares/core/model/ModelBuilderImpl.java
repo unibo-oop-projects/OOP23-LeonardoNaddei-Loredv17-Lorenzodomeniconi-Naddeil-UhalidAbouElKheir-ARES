@@ -1,6 +1,6 @@
 package it.unibo.ares.core.model;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import it.unibo.ares.core.agent.Agent;
 import it.unibo.ares.core.utils.Pair;
 import it.unibo.ares.core.utils.lambda.SerializableBiPredicate;
@@ -17,10 +17,6 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.util.Set;
 
-@SuppressFBWarnings(value = {
-        "UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR"
-}, justification = "C'è un controllo esplicito che la init function "
-        + "la exit function e i parameters siano stati inizializzati.")
 final class ModelBuilderImpl implements ModelBuilder {
 
     private static final long serialVersionUID = 1L;

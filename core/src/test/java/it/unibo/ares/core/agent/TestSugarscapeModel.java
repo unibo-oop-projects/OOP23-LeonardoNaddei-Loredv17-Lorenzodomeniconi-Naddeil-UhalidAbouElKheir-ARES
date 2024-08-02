@@ -28,7 +28,7 @@ class TestSugarscapeModel {
     private static final String SUGAR = "sugar";
 
     private State getInitialState(final int size, final int numConsumers, final int numSugars) {
-        // CHECKSTYLE: MagicNumber OFF
+        
         final State state = new StateImpl(size, size);
 
         final SugarAgentFactory sugarFactory = new SugarAgentFactory();
@@ -55,7 +55,7 @@ class TestSugarscapeModel {
 
     @Test
     void testSugarscapeModelInitialization() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         final State state = getInitialState(5, 2, 2);
 
         assertEquals(4, state.getAgents().size());
@@ -72,7 +72,7 @@ class TestSugarscapeModel {
 
     @Test
     void testSugarGrowth() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = getInitialState(5, 0, 1);
 
         final Pos pos = state.getAgents()
@@ -96,7 +96,7 @@ class TestSugarscapeModel {
 
     @Test
     void testConsumerMovementAndSugarConsumption() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = new StateImpl(5, 5);
 
         final SugarAgentFactory sugarFactory = new SugarAgentFactory();
@@ -128,7 +128,7 @@ class TestSugarscapeModel {
 
     @Test
     void testConsumerDeathDueToMetabolism() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = new StateImpl(5, 5);
 
         final ConsumerAgentFactory consumerFactory = new ConsumerAgentFactory();
@@ -148,7 +148,7 @@ class TestSugarscapeModel {
 
     @Test
     void testConsumerMovesTowardsSugar() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         State state = new StateImpl(5, 5);
 
         final SugarAgentFactory sugarFactory = new SugarAgentFactory();
@@ -184,7 +184,7 @@ class TestSugarscapeModel {
      */
     @Test
     void testConsumerMovesTowardsSugarWithLessCompetion() {
-        // CHECKSTYLE: MagicNumber OFF
+        
         final State state = new StateImpl(10, 10);
 
         final SugarAgentFactory sugarFactory = new SugarAgentFactory();

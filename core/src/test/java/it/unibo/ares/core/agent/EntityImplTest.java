@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * Unit test for {@link EntityImpl}.
  */
-@SuppressWarnings("UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR")
 final class EntityImplTest {
 
     /**
